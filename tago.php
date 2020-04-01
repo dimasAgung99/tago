@@ -22,22 +22,18 @@ function config()
 
 
 $green = "\e[92m";
-
 $orange = "\e[38;5;208m";
-
 $yellow = "\e[93m";
-
 $white = "\e[97m";
-
 $bold = "\e[1m";
 
-echo "$bold $orange
-  _________   __________ 
- /_  __/   | / ____/ __ \
-  / / / /| |/ / __/ / / /
- / / / ___ / /_/ / /_/ / 
-/_/ /_/  |_\____/\____/  
-                         
+echo "$bold{$orange}
+ ______   ______     ______     ______    
+/\__  _\ /\  __ \   /\  ___\   /\  __ \   
+\/_/\ \/ \ \  __ \  \ \ \__ \  \ \ \/\ \  
+   \ \_\  \ \_\ \_\  \ \_____\  \ \_____\ 
+    \/_/   \/_/\/_/   \/_____/   \/_____/ 
+                                          
 $white";
 
 echo "creator : dimasAgung\n\n\n";
@@ -470,7 +466,7 @@ Connection: Keep-Alive";
     //return $result;
   
     
-    return "{$green}   ~{$white} Reward +{$GLOBALS['yellow']} ".$array["data"]["reward"]." {$green}~\n";
+    return "{$green}   ~{$white} Reward +{$GLOBALS['yellow']} ".$array["data"]["reward"]." {$green}~\n\n";
     /*
     return "Reward + ".$array["data"]["reward"]."\n";*/
   
