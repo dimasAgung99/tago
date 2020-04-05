@@ -108,6 +108,7 @@ Connection: Keep-Alive";
 
   $headers = headers($headerRaw);
   
+  a:
   $result = requestGet($url,$headers);
   
   $array = json_decode($result,true);
@@ -117,7 +118,7 @@ Connection: Keep-Alive";
   if($array["status"] != "success")
   {
     
-    exit($result);
+    goto a;
     
   }
   
