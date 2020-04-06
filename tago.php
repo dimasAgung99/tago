@@ -3,17 +3,36 @@
 
 error_reporting(1);
 
-system ("clear");
+
+
+echo "masukan config : ";$pilihConfig = trim(fgets(STDIN));
+
+if(file_exists($pilihConfig))
+{
+  
+  require($pilihConfig);
+  
+}
+else 
+{
+  
+  exit("config not found");
+  
+}
+
+
 
 function config()
 {
   
+  global $accessToken,$userId,$aid,$token,$userAgent;
+  
   $config = [];
-  $config["accessToken"] = "iHC8ReAGeY5JM9KOtERhiufE";
-  $config["userId"] = "410158";
-  $config["aid"] = "a0e82c1536512fd3";
-  $config["token"] = "ecp0MuaTEmg:APA91bEGesFIMzHmael08Ve3S8SIgKCXL0C0tssBLD0EIEmrUnPde1a5ERXl6UjWf7-Uoae8Y4srV-xWe3csn0M1juuPCjhu6dyzu6SD7iyDUYnjtULkEonO27RyA-Dw6CGLIPvMW5Be";
-  $config['userAgent'] = "Dalvik/2.1.0 (Linux; U; Android 5.1.1; Redmi 3 MIUI/V7.2.1.0.LHPMIDB)";
+  $config["accessToken"] = $accessToken;
+  $config["userId"] = $userId;
+  $config["aid"] = $aid;
+  $config["token"] = $token;
+  $config['userAgent'] = $userAgent;
   
   return $config;
   
@@ -26,6 +45,8 @@ $orange = "\e[38;5;208m";
 $yellow = "\e[93m";
 $white = "\e[97m";
 $bold = "\e[1m";
+
+system ("clear");
 
 echo "$bold{$red}
  ______   ______     ______     ______    
