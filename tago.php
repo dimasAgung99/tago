@@ -5,7 +5,7 @@ error_reporting(1);
 
 
 
-echo "masukan config : ";$pilihConfig = trim(fgets(STDIN));
+echo "\n\nmasukan config : ";$pilihConfig = trim(fgets(STDIN));
 
 if(file_exists($pilihConfig))
 {
@@ -39,12 +39,6 @@ function config()
 }
 
 
-$red = "\e[91m";
-$green = "\e[92m";
-$orange = "\e[38;5;208m";
-$yellow = "\e[93m";
-$white = "\e[97m";
-$bold = "\e[1m";
 
 system ("clear");
 
