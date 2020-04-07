@@ -4,21 +4,21 @@
 error_reporting(1);
 
 
-
+/*
 echo "\n\nmasukan config : ";$pilihConfig = trim(fgets(STDIN));
 
 if(file_exists($pilihConfig))
 {
-  
-  require($pilihConfig);
-  
+  */
+  require("config.php");
+  /*
 }
 else 
 {
   
   exit("config not found");
   
-}
+}*/
 
 
 
@@ -42,7 +42,7 @@ function config()
 
 system ("clear");
 
-echo "$bold{$red}
+echo $logo = "$bold{$red}
  ______   ______     ______     ______    
 /\__  _\ /\  __ \   /\  ___\   /\  __ \   
 \/_/\ \/ \ \  __ \  \ \ \__ \  \ \ \/\ \  
@@ -51,7 +51,11 @@ $orange   \ \_\  \ \_\ \_\  \ \_____\  \ \_____\
                                           
 $white";
 
-echo "creator : dimasAgung\n\n\n";
+$pembatas = str_repeat('-',40);
+
+echo $pembatas."\n";
+echo "\tcreator : dimasAgung\n";
+echo $pembatas."\n\n\n";
 
 
 function requestPost($url,$headers,$body)
@@ -274,7 +278,7 @@ Connection: Keep-Alive";
   
     }
     
-    sleep(5);
+    sleep(1);
   
   }
   
@@ -348,6 +352,8 @@ Connection: Keep-Alive";
   $headers = headers($headerRaw);
   
   $result = requestGet($url,$headers);
+  
+  //print_r($result);exit();
   
   $array = json_decode($result,true);
   
