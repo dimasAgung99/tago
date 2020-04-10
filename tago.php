@@ -191,6 +191,15 @@ Connection: Keep-Alive";
     
     extract($array['data']);
     
+    if($day == "8")
+    {
+      
+      $day = 1;
+      
+      
+    }
+    
+    
     echo "{$green}•{$white} Daily Bonus ~{$green} Day ".$day."{$white} ->{$yellow} Besok\n\n";
     
   }
