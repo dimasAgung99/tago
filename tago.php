@@ -399,7 +399,7 @@ function startGame()
     
     $nameGame = $userGames["name"];
     
-    $minTime = $userGames["min_time"];
+    $minTime = $userGames["minTime"];
     
     $url = "https://tago.games/prod/api/game/mulai";
   
@@ -414,6 +414,8 @@ function startGame()
     $body = "access_token={$config['accessToken']}&user_id={$config['userId']}&game_id=".$gameId;
     
     $result = requestPost($url,$headers,$body);
+    
+    //echo $result;
     
     $array = json_decode($result,true);
     
@@ -455,7 +457,7 @@ function startGame()
       
       //echo "{$white}   wait.. ".$minutes." minutes"."\r";
       
-      //sleep($minTime);
+    // sleep(120);
       
       echo EndGame($idStartGame);
       
@@ -487,7 +489,11 @@ Connection: Keep-Alive";
   
   $body = "access_token={$config['accessToken']}&user_id={$config['userId']}&id={$idStartGame}&contare=".rand(50,100);
   
+  //$body = "access_token={$config['accessToken']}&user_id={$config['userId']}&id={$idStartGame}";
+  
   $result = requestPost($url,$headers,$body);
+  
+  //return $result;
   
   $array = json_decode($result,true);
   
@@ -514,13 +520,10 @@ Connection: Keep-Alive";
 
 
 userInit();
-
 userDashboard();
-
 userConvert();
-
 userDailyBonus();
-
 userCoinEarn();
-
 startGame();
+
+//print_r(userGames());
