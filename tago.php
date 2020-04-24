@@ -282,7 +282,7 @@ Connection: Keep-Alive";
       }
       
       
-      sleep(30);
+      sleep(5);
     
   
     }
