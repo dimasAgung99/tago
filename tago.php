@@ -2,7 +2,7 @@
 
 
 error_reporting(1);
-
+//
 
 /*
 echo "\n\nmasukan config : ";$pilihConfig = trim(fgets(STDIN));
@@ -40,7 +40,7 @@ function config()
 
 
 
-system ("clear");
+//system ("clear");
 
 echo $logo = "$bold{$red}
  ______   ______     ______     ______    
@@ -160,7 +160,20 @@ Connection: Keep-Alive";
   
   $result = requestGet($url,$headers);
   
-  //echo $result;
+  $array = json_decode($result,true);
+  $dataGame = $array['data']['games'];
+  for ($i = 0; $i < count($dataGame); $i++) 
+  {
+    
+    if(array_key_exists("minTime",$dataGame[$i]))
+    {
+      
+      return $dataGame[$i];
+      break;
+      
+    }
+    
+  }
   
 }
 
@@ -393,7 +406,7 @@ function startGame()
   while(true)
   {
   
-    $userGames = userGames();
+    $userGames = userDashboard();
     
     $gameId = $userGames["id"];
     
@@ -520,7 +533,6 @@ Connection: Keep-Alive";
 
 
 userInit();
-userDashboard();
 userConvert();
 userDailyBonus();
 userCoinEarn();
