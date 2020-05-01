@@ -403,11 +403,11 @@ function startGame()
     
     $url = "https://tago.games/prod/api/game/mulai";
   
-    $headerRaw = "Accept-Language: in-ID,in;q=0.8
-  User-Agent: {$config['userAgent']}
-  Content-Type: application/x-www-form-urlencoded
-  Host: tago.games
-  Connection: Keep-Alive";
+    $headerRaw = "Host: tago.games
+accept-language: en-GB,en;q=0.8
+user-agent: Dalvik/2.1.0 (Linux; U; Android 5.1.1; Redmi 3 MIUI/V7.2.1.0.LHPMIDB)
+content-type: application/x-www-form-urlencoded
+accept: */*";
   
     $headers = headers($headerRaw);
     
@@ -479,11 +479,10 @@ function EndGame($idStartGame)
   
   $url = "https://tago.games/prod/api/game/akhir";
   
-  $headerRaw = "Accept-Language: in-ID,in;q=0.8
-User-Agent: {$config['userAgent']}
-Content-Type: application/x-www-form-urlencoded
-Host: tago.games
-Connection: Keep-Alive";
+  $headerRaw = "Host: tago.games
+accept-language: en-GB,en;q=0.8
+user-agent: Dalvik/2.1.0 (Linux; U; Android 5.1.1; Redmi 3 MIUI/V7.2.1.0.LHPMIDB)
+content-type: application/x-www-form-urlencoded";
   
   $headers = headers($headerRaw);
   
