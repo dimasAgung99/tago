@@ -1,5 +1,16 @@
 <?php
 
+
+
+echo "\n\nedit config? [ y / press any key to continue ] : "; $pilih = trim(fgets(STDIN));
+if($pilih == "y")
+{
+  
+  echo "\n";
+  editConfig();
+  
+}
+
 system ("clear");
 
 echo $logo = "$bold{$red}
