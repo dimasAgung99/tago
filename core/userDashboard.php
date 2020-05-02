@@ -10,12 +10,10 @@ function userDashboard()
   $headerRaw = "Host: tago.games
 accept-language: in-ID,in;q=0.8
 user-agent: {$config['userAgent']}";
-  
   $headers = headers($headerRaw);
-  
   $result = requestGet($url,$headers);
-  
-  //echo $result;
+  $array = json_decode($result,true);
+  echo "• location : ".$array['data']['user']['location']."\n\n";
   
 }
 
