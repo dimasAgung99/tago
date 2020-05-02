@@ -1,5 +1,7 @@
 <?php
 
+error_reporting(1);
+
 $red = "\e[91m";
 $green = "\e[92m";
 $orange = "\e[38;5;208m";
@@ -8,6 +10,8 @@ $yellow = "\e[93m";
 $bold = "\e[1m";
 
 
+require_once __DIR__.'/core/selectConfig.php';
+selectConfig();
 require_once __DIR__.'/core/editConfig.php';
 require_once __DIR__.'/core/logo.php';
 require_once __DIR__.'/core/config.php';

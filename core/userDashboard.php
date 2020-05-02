@@ -13,7 +13,13 @@ user-agent: {$config['userAgent']}";
   $headers = headers($headerRaw);
   $result = requestGet($url,$headers);
   $array = json_decode($result,true);
-  echo "• location : ".$array['data']['user']['location']."\n\n";
+  
+  if($array['status'] === "success")
+  {
+    
+    echo "• location : ".$array['data']['user']['location']."\n\n";
+    
+  }
   
 }
 

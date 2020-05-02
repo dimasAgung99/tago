@@ -3,7 +3,9 @@
 function editConfig()
 {
   
-    $file = __DIR__."/../config.json";
+    $selectConfig = file_get_contents(__DIR__."/../config/select-config");
+    
+    $file = __DIR__."/../config/".$selectConfig;
     $array = [];
     
     echo "• access token : "; $access_token = trim(fgets(STDIN));

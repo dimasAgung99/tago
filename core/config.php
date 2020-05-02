@@ -3,7 +3,9 @@
 function config()
 {
   
-  $file = __DIR__."/../config.json";
+  $selectConfig = file_get_contents(__DIR__."/../config/select-config");
+  
+  $file = __DIR__."/../config/".$selectConfig;
   if(filesize($file) === 0)
   {
     

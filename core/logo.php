@@ -2,7 +2,7 @@
 
 
 
-echo "\n\nedit config? [ y / press any key to continue ] : "; $pilih = trim(fgets(STDIN));
+echo "\n\n[?] edit config [ y / press any key to continue ] : "; $pilih = trim(fgets(STDIN));
 if($pilih == "y")
 {
   
@@ -20,13 +20,10 @@ echo $logo = "$bold{$red}
 $orange   \ \_\  \ \_\ \_\  \ \_____\  \ \_____\ 
     \/_/   \/_/\/_/   \/_____/   \/_____/ 
                                           
-$white";
+$orange";
 
-$pembatas = str_repeat('-',40);
-
-echo $pembatas."\n";
-echo "\tcreator : dimasAgung\n";
-echo $pembatas."\n\n\n";
+echo str_repeat("-",40);
+echo "\n\n\n$white";
 
 
 ?>
