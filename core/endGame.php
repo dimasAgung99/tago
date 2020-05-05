@@ -27,12 +27,10 @@ content-type: application/x-www-form-urlencoded";
     
     return "{$green}   ~{$white} Reward +{$GLOBALS['yellow']} ".$array["data"]["reward"]." {$green}~\n\n";
   
-  }
-  else
-  {
-    
-    return userInit();
-    
+  }else {
+   
+     return "{$yellow}   (╥﹏╥)\n\n";
+   
   }
   
 }
