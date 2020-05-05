@@ -29,7 +29,7 @@ content-type: application/x-www-form-urlencoded";
   
   }else {
    
-     return "{$yellow}   (╥﹏╥)\n\n";
+     return "{$GLOBALS['yellow']}   (╥﹏╥)ಥ‿ಥ( ≧Д≦)\n\n";
    
   }
   
